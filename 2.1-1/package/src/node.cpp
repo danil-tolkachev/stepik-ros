@@ -14,9 +14,9 @@ int main(int argc, char **argv)
 	{
 		std_msgs::Int32 msg;
 		msg.data = number;
-		ROS_INFO("Read number: %d\n", msg.data);
-		pub.publish(msg);
+		// ROS_INFO("Read number: %d\n", msg.data);
 		loop_rate.sleep();
+		pub.publish(msg);
 	}
 	ros::spinOnce();
 	return 0;
